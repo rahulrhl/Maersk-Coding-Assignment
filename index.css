@@ -1,0 +1,166 @@
+body{
+  text-align: center;
+}
+
+#header{
+  background-color: #ffff;
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr 1fr 0.3fr;
+  grid-template-areas: 
+    "header header header header"
+    "root root root btnDiv"
+    "root root root btnDiv"
+    "root root root btnDiv"
+    "footer footer footer footer";
+  text-align: center;
+  }
+  .grid-item {
+    color: white;
+    padding: 20px;
+    font-size: 100px;
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+  }
+ 
+  #btnDiv{
+    background-color: #efefef;
+    grid-area: btnDiv;
+  }
+
+  #footer{
+    background-color: #efefef;
+    grid-area: footer;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button{
+    width: 80%;
+    display: inline-block;
+    height: 50px;
+    background-color: #72c3dc;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #ffff;
+    box-shadow: 0px 8px #2B8EAD;
+  }
+  .btn1{
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .backColor1{
+    background-color: #6F98A8;    
+  }
+  .backColor2{
+    background-color:#2B8EAD;
+  }
+  .backColor3{
+    background-color: #333333;
+  }
+  .backColor4{
+    background-color:#2B8EAD;
+  }
+  .backColor5{
+    background-color:  #333333;
+  }
+  .backColor6{
+    background-color: #BFBFBF;
+  }
+  .backColor7{
+    background-color: #BFBFBF;
+  }
+  .backColor8{
+    background-color: #6F98A8;
+  }
+  .backColor9{
+    background-color: #333333;
+  }
+
+
+  @media (max-width: 550px){
+      body{
+          background-color: #000000;
+      }
+      .grid-container{
+          grid-template-columns:  1fr;
+          grid-gap: 3px;
+          grid-template-rows: 50px 0.6fr 47px 47px 47px 47px 47px 47px 47px 47px 47px 0.3fr  ;
+          grid-template-areas: 
+            "header"
+            "btnDiv"
+            "root"
+            "root"
+            "root"
+            "root"
+            "root"
+            "root"
+            "root"
+            "root"
+            "root"
+            "footer";
+          background-color: #ffff;
+          
+      }
+      .grid-item{
+          font-size: 20px;
+          color: black;
+          margin-right: 12px;
+          margin-left: 12px;
+          background-color: #efefef;
+      }
+
+      .rowNumColor{
+          position:absolute;
+          padding-top: 25px;
+          padding-bottom: 22px;
+          padding-left: 10px;
+          left: 20px;
+      }
+
+      .button{
+        width: 20%;
+        display: inline-block;
+        height: 40px;
+        background-color: #72c3dc;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        color: #ffff;
+        box-shadow: 0px 4px #2B8EAD;
+      }
+      .btn1{
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+
+      #header{
+        background-color: #333333;
+        color: #ffff;
+      }
+
+      #btnDiv{
+        background-color: #ffff;
+      }
+
+      #footer{
+      background-color: #ffff;  
+      }
+  }

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css" >
+    </head>
+    <body>
+        <div id="root" class="grid-container"></div>
+        
+        <script>
+            var numArray = [1,2,3,4,5,6,7,8,9]
+
+            function shuffleSortUi(){
+                document.getElementById('root').innerHTML = `
+                ${numArray.map(c =>{
+                    return `
+                    <div id="header" >Shuffle and Sort</div>
+                    <div class="grid-item backColor${c}">
+                        <span class="rowNumColor backColor${c}"></span>
+                        ${c}</div>`
+                    }).join('')}
+                    <div id="btnDiv">                        
+                    <button type="button" class="button btn1" onClick="handleShuffle(numArray)" >SHUFFLE</button>                 
+                    <button type="button" class="button btn2" onClick="handleSort(numArray)" >SORT</button>                        
+                    </div> 
+                    <div id="footer">Shuffle and sort by Wassim</div>                       
+            `
+            }
+
+            function handleShuffle(numArray){
+                for(let i = (numArray.length - 1); i > 0; i--){
+                const j = Math.floor(Math.random() * i)
+                const temp = numArray[i]
+                numArray[i] = numArray[j]
+                numArray[j] = temp
+                }           
+                shuffleSortUi(numArray)
+            }
+
+            function handleSort(numArray){
+                numArray.sort( function( a , b){
+                    if(a > b) return 1;
+                    if(a < b) return -1;
+                    return 0;
+                });
+                shuffleSortUi(numArray)
+            }
+
+            shuffleSortUi(numArray)
+
+        </script>
+    </body>
+</html>
